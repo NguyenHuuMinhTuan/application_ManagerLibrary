@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Con_Revenue">
+   <children>
+      <Pane layoutX="24.0" layoutY="23.0" prefHeight="353.0" prefWidth="298.0">
+         <children>
+            <TableView fx:id="tb_Revenue" layoutX="4.0" layoutY="1.0" prefHeight="346.0" prefWidth="290.0">
+              <columns>
+                <TableColumn fx:id="col_Year" prefWidth="75.0" text="Year" />
+                <TableColumn fx:id="col_Month" prefWidth="75.0" text="Month" />
+                  <TableColumn fx:id="col_Revenue" prefWidth="75.0" text="Revenue" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="327.0" layoutY="27.0" prefHeight="346.0" prefWidth="545.0">
+         <children>
+            <LineChart fx:id="ch_Revenue" layoutY="34.0" prefHeight="305.0" prefWidth="501.0">
+              <xAxis>
+                <CategoryAxis label="Month" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Revenue" side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

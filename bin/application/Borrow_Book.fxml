@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Borrow_Book">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="225.0" prefWidth="699.0">
+         <children>
+            <TableView fx:id="tv_Borrow" layoutY="2.0" prefHeight="225.0" prefWidth="695.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="75.0" text="Mã mượn sách" />
+                <TableColumn fx:id="col_idBook" prefWidth="75.0" text="Mã sách" />
+                  <TableColumn fx:id="col_quantity" prefWidth="75.0" text="Số lượng" />
+                  <TableColumn fx:id="col_dueDate" prefWidth="75.0" text="Ngày trả" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="250.0" prefHeight="200.0" prefWidth="395.0">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" text="Mã mượn sách :">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="59.0" text="Mã sách :">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="103.0" text="Số lượng :">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="151.0" text="Ngày trả :">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ed_id" layoutX="174.0" layoutY="12.0" prefHeight="25.0" prefWidth="208.0" promptText="Mã mượn sách" />
+            <ComboBox fx:id="cb_idBook" layoutX="174.0" layoutY="57.0" prefHeight="25.0" prefWidth="208.0" promptText="Mã sách" />
+            <DatePicker fx:id="dp_dueDate" layoutX="171.0" layoutY="149.0" prefHeight="25.0" prefWidth="214.0" promptText="Ngày trả" />
+            <TextField fx:id="ed_quantity" layoutX="174.0" layoutY="101.0" prefHeight="25.0" prefWidth="208.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="434.0" prefHeight="116.0" prefWidth="730.0">
+         <children>
+            <Button fx:id="btn_add" layoutX="22.0" layoutY="33.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="157.0" text="Thêm sách" />
+            <Button fx:id="btn_del" layoutX="198.0" layoutY="33.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="157.0" text="Xoá sách" />
+            <Button fx:id="btn_payment" layoutX="372.0" layoutY="33.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="157.0" text="Thanh toán" />
+            <Button fx:id="btn_exit" layoutX="543.0" layoutY="33.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="157.0" text="Thoát" />
+         </children>
+      </Pane>
+      <Pane layoutX="409.0" layoutY="250.0" prefHeight="200.0" prefWidth="301.0">
+         <children>
+            <Text layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên khách hàng :" />
+            <ComboBox fx:id="cb_customer" layoutX="123.0" layoutY="19.0" prefWidth="150.0" promptText="Mã khách hàng" />
+            <Text layoutX="21.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng sách :" />
+            <TextField layoutX="124.0" layoutY="55.0" />
+            <TextField fx:id="ed_count" editable="false" layoutX="124.0" layoutY="55.0" promptText="Số lượng sách" />
+            <DatePicker fx:id="dp_borrow" layoutX="104.0" layoutY="88.0" promptText="dp_borrow" />
+            <DatePicker fx:id="dp_due" layoutX="104.0" layoutY="125.0" promptText="dp_due" />
+            <Text layoutX="21.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày mượn :" />
+            <Text layoutX="21.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày trả :" />
+            <RadioButton fx:id="rd_status" layoutX="25.0" layoutY="161.0" mnemonicParsing="false" text="trạng thái" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

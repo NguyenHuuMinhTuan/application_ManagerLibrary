@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Register_Form">
+   <children>
+      <AnchorPane layoutX="-170.0" layoutY="-149.0" prefHeight="608.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="316.0" layoutY="165.0" text="Register Form">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="219.0" text="Tên tài khoản :">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="270.0" text="Mật khẩu :">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="323.0" text="Xác nhận mật khẩu :">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="380.0" text="Email :">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="203.0" layoutY="435.0" text="Số điện thoại :">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_confirm" layoutX="197.0" layoutY="512.0" mnemonicParsing="false" text="Xác nhận">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Cancel" layoutX="341.0" layoutY="512.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="87.0" text="Huỷ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Return" layoutX="493.0" layoutY="512.0" mnemonicParsing="false" onAction="#Return" prefHeight="39.0" prefWidth="87.0" text="Trở về">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txt_username" layoutX="379.0" layoutY="218.0" prefHeight="25.0" prefWidth="208.0" promptText="Tên tài khoản" />
+            <TextField fx:id="txt_password" layoutX="379.0" layoutY="269.0" prefHeight="25.0" prefWidth="208.0" promptText="Mật khẩu" />
+            <TextField fx:id="txt_confirmPassword" layoutX="379.0" layoutY="322.0" prefHeight="25.0" prefWidth="208.0" promptText="Xác nhận mật khẩu" />
+            <TextField fx:id="txt_Email" layoutX="379.0" layoutY="379.0" prefHeight="25.0" prefWidth="208.0" promptText="Email" />
+            <TextField fx:id="txt_Phone" layoutX="379.0" layoutY="434.0" prefHeight="25.0" prefWidth="208.0" promptText="Số điện thoại" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
